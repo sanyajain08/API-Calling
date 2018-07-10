@@ -8,9 +8,10 @@
 
 import UIKit
 
-class QuotesViewController: UITableViewController {
-    var quote = [[String: String]]()
-    let apiKey = "1de7c63a2e148d1f9af035a4906d21f4"
+class JobbViewController: UITableViewController {
+    var jobs = [[String: String]]()
+    var apiKey = ""
+    var job = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +34,14 @@ class QuotesViewController: UITableViewController {
     }
     
     func parse(json: JSON) {
-        for result in json["quote"].arrayValue {
-            
-            let id = result["id"].stringValue
+        for result in json["jobs"].arrayValue {
             let title = result["title"].stringValue
             let description = result["description"].stringValue
-            let job = ["id": id, "title": title, "description": description]
-            quote.append(job)
-            DispatchQueue.main.async {
-                [unowned self] in
-                self.tableView.reloadData()
-            }
-            
+            let url = result["url"].stringValue
+            let work = ["title": title, "description": description, "url": url]
+            jobs.append(work)
         }
+
     }
     
     func loadError() {
@@ -60,14 +56,15 @@ class QuotesViewController: UITableViewController {
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quote.count
+        return jobs.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell (withIdentifier: "Cell", for: indexPath)
-        let job = quote[indexPath.row]
-        cell.textLabel?.text = job["name"]
-        cell.detailTextLabel?.text = job["description"]
+        let work = jobs[indexPath.row]
+        cell.textLabel?.text = work["title"]
+        cell.detailTextLabel?.text = work["description"]
         return cell
+
     }
     
     
@@ -79,4 +76,5 @@ class QuotesViewController: UITableViewController {
     
     
 }
+
 

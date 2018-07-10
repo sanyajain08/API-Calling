@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		754CF26020F5543B00951DB6 /* JobbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CF25F20F5543B00951DB6 /* JobbViewController.swift */; };
 		7598DA0220F51BDE00F2910F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598DA0120F51BDE00F2910F /* AppDelegate.swift */; };
 		7598DA0420F51BDE00F2910F /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598DA0320F51BDE00F2910F /* QuotesViewController.swift */; };
 		7598DA0720F51BDE00F2910F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7598DA0520F51BDE00F2910F /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		754CF25F20F5543B00951DB6 /* JobbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobbViewController.swift; sourceTree = "<group>"; };
 		7598D9FE20F51BDD00F2910F /* API Calling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API Calling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7598DA0120F51BDE00F2910F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7598DA0320F51BDE00F2910F /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				7598DA0120F51BDE00F2910F /* AppDelegate.swift */,
 				7598DA0320F51BDE00F2910F /* QuotesViewController.swift */,
+				754CF25F20F5543B00951DB6 /* JobbViewController.swift */,
 				7598DA0520F51BDE00F2910F /* Main.storyboard */,
 				7598DA0820F51BDE00F2910F /* Assets.xcassets */,
 				7598DA0A20F51BDE00F2910F /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				7598DA1420F5325C00F2910F /* SwiftyJSON.swift in Sources */,
 				7598DA0420F51BDE00F2910F /* QuotesViewController.swift in Sources */,
 				7598DA0220F51BDE00F2910F /* AppDelegate.swift in Sources */,
+				754CF26020F5543B00951DB6 /* JobbViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
