@@ -78,5 +78,17 @@ class QuotesViewController: UITableViewController {
     }
     
     
+    @IBAction func ontapped(_ sender: Any) {
+          exit(0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! JobbViewController
+        let index = tableView.indexPathForSelectedRow?.row
+        dvc.job = quote[index!]
+        dvc.apiKey = apiKey
+        
+    }
+    
 }
 

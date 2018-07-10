@@ -41,6 +41,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hcc-fW-c2b" kind="show" id="hJN-Kq-7xj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -48,7 +51,15 @@
                             <outlet property="delegate" destination="F7W-8J-cyX" id="eFu-tX-4Ia"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pbO-Jk-Pif"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pbO-Jk-Pif">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ih8-55-qJN">
+                            <connections>
+                                <action selector="ontapped:" destination="F7W-8J-cyX" id="LHg-hz-AgS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TM-Pa-QyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +82,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feh-OQ-xHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--Jobb View Controller-->
+        <scene sceneID="t6o-ui-tos">
+            <objects>
+                <tableViewController id="hcc-fW-c2b" customClass="JobbViewController" customModule="API_Calling" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x7w-Rn-yDf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="eFU-Sv-bRe" detailTextLabel="5K5-xz-rGK" style="IBUITableViewCellStyleSubtitle" id="bAq-JQ-eMb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAq-JQ-eMb" id="fPN-gp-FmX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eFU-Sv-bRe">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5K5-xz-rGK">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hcc-fW-c2b" id="piT-3P-GVE"/>
+                            <outlet property="delegate" destination="hcc-fW-c2b" id="4oA-Tr-Wem"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CQx-1l-KkW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLr-ps-3FL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786" y="116"/>
         </scene>
     </scenes>
 </document>

@@ -74,6 +74,11 @@ class JobbViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let url = URL(string: jobs[indexPath.row]["url"]!)
+        UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
+    }
+    
     
 }
 
