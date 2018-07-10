@@ -31,9 +31,9 @@ class QuotesViewController: UITableViewController {
     func parse(json: JSON) {
         for result in json["quote"].arrayValue {
             let id = result["id"].stringValue
-            let name = result["name"].stringValue
+            let title = result["title"].stringValue
             let description = result["description"].stringValue
-            let job = ["id": id, "name": name, "description": description]
+            let job = ["id": id, "title": title, "description": description]
             quote.append(job)
             tableView.reloadData()
         }
@@ -47,6 +47,16 @@ class QuotesViewController: UITableViewController {
             present(alert, animated: true, completion: nil)
             
     }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return quote.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell (withIdentifier: "Cell", for: indexPath)
+        let job = quote[indexPath.row]
+        cell.textLabel?.text = job["name"]
+        cell.detailTextLabel?.text = job["description"]
+        return cell
+        }
         
     
     
